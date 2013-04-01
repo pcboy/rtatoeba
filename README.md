@@ -18,7 +18,7 @@ Or install it yourself as:
 
 ## Usage
 
-    tatoe = Rtatoeba::Rtatoeba.new(from: 'eng', to: 'kor', 'hello')
+    tatoe = Rtatoeba::Rtatoeba.new(from: 'eng', to: 'kor', query: 'hello')
     tatoe.sentences # =>
     [
         [0] [
