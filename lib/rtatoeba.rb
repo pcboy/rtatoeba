@@ -16,7 +16,7 @@
 #  David Hagege <david.hagege@gmail.com>
 #
 
-#require "rtatoeba/version"
+require "rtatoeba/version"
 require 'mechanize'
 
 module Rtatoeba
