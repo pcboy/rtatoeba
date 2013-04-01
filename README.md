@@ -20,36 +20,28 @@ Or install it yourself as:
 
     tatoe = Rtatoeba::Rtatoeba.new(from: 'eng', to: 'kor', query: 'hello')
     tatoe.sentences # =>
-    [
-        [0] [
-            [0] "Hello, I have a reservation, my name is Kaori Yoshikawa. Here is the confirmation card.",
-            [1] "안녕하세요,예약을 했는데요, 제이름은 카오리 요시카와 입니다. 확인카드는 여기있습니다."
+    {
+        "Hello, I have a reservation, my name is Kaori Yoshikawa. Here is the confirmation card." => [
+            [0] "안녕하세요,예약을 했는데요, 제이름은 카오리 요시카와 입니다. 확인카드는 여기있습니다."
         ],
-        [1] [
-            [0] "Hello, Tom.",
-            [1] "안녕, 톰."
+                                                                                    "Hello, Tom." => [
+            [0] "안녕, 톰."
         ],
-        [2] [
-            [0] "Hello, I am Nancy.",
-            [1] "안녕하세요. 난시입니다."
+                                                                             "Hello, I am Nancy." => [
+            [0] "안녕하세요. 난시입니다.",
+            [1] "안녕하세요, 저는 낸시예요."
         ],
-        [3] [
-            [0] "안녕하세요, 저는 낸시예요.",
-            [1] "Hello!"
-        ],
-        [4] [
+                                                                                         "Hello!" => [
             [0] "안녕하세요.",
             [1] "여보세요."
         ],
-        [5] [
-            [0] "Hello, it's me, Nancy!",
-            [1] "안녕하세요. 난시입니다."
+                                                                         "Hello, it's me, Nancy!" => [
+            [0] "안녕하세요. 난시입니다."
         ],
-        [6] [
-            [0] "Hello world!",
-            [1] "안녕하세요세계"
+                                                                                   "Hello world!" => [
+            [0] "안녕하세요세계"
         ]
-    ]
+    }
 
 
 ## Contributing
