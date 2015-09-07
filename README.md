@@ -1,5 +1,7 @@
 [![Build Status](https://travis-ci.org/pcboy/rtatoeba.svg)](https://travis-ci.org/pcboy/rtatoeba)
 [![Gem Version](https://badge.fury.io/rb/rtatoeba.svg)](http://badge.fury.io/rb/rtatoeba)
+[![Code Climate](https://codeclimate.com/github/pcboy/rtatoeba/badges/gpa.svg)](https://codeclimate.com/github/pcboy/rtatoeba)
+
 # Rtatoeba
 
 Rtatoeba is a tiny gem to access tatoeba.org which doesn't have an API yet.
