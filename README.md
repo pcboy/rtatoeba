@@ -1,3 +1,4 @@
+[![Build Status](https://travis-ci.org/pcboy/rtatoeba.svg)](https://travis-ci.org/pcboy/rtatoeba)
 # Rtatoeba
 
 Rtatoeba is a tiny gem to access tatoeba.org which doesn't have an API yet.
