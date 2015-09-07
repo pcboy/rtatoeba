@@ -33,15 +33,9 @@ module Rtatoeba
       content =
         @agent.get("http://tatoeba.org/eng/sentences/search?query=#{@query}&from=#{@from}&to=#{@to}")
       sentences = {}
-      mainSentence = ''
-      content.links_with(:href => /eng\/sentences\/show/,
-                                     :dom_class => /text/).map do |s|
-        if s.node.parent.parent['class'] =~ /mainSentence/
-          sentences[s.text] ||= []
-          mainSentence = s.text
-        else
-          (sentences[mainSentence] ||= []) << s.text
-        end
+      content.search('.sentences_set').map do |set|
+        translations = set.search('.sentenceContent').map{|x| x.text.strip}.drop(1)
+        sentences[set.at('.mainSentence').text.strip] = translations
       end
       sentences
     end
