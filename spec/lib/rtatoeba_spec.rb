@@ -22,5 +22,9 @@ describe Rtatoeba do
   it "should return sample sentences" do
     tatoe = Rtatoeba::Rtatoeba.new(from: 'eng', to: 'kor', query: 'hello')
     expect(tatoe.sentences).not_to be_empty
+    expect(tatoe.sentences.values.any?(&:empty?)).to eql(false)
+    tatoe = Rtatoeba::Rtatoeba.new(from: 'eng', to: 'fra', query: 'monday')
+    expect(tatoe.sentences).not_to be_empty
+    expect(tatoe.sentences.values.any?(&:empty?)).to eql(false)
   end
 end
