@@ -27,4 +27,13 @@ describe Rtatoeba do
     expect(tatoe.sentences).not_to be_empty
     expect(tatoe.sentences.values.any?(&:empty?)).to eql(false)
   end
+
+  it "should gives an error if lang is incorrect" do
+    expect{
+      Rtatoeba::Rtatoeba.new(from: 'english', to: 'fra', query: 'hello')
+    }.to raise_error(Rtatoeba::Rtatoeba::InvalidLangFormat)
+    expect{
+      Rtatoeba::Rtatoeba.new(from: 'en', to: 'french', query: 'hello')
+    }.to raise_error(Rtatoeba::Rtatoeba::InvalidLangFormat)
+  end
 end
