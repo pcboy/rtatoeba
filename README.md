@@ -47,7 +47,7 @@ Or install it yourself as:
         ]
     }
 
-    Note: Lang is in ISO-639-2 format
+Note: Lang is in ISO-639-2 format
 ## Contributing
 
 1. Fork it
