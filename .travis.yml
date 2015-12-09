@@ -1,6 +1,14 @@
 language: ruby
 sudo: false
 rvm:
- - 1.9.2
- - jruby-19mode
-script: rake 
+- 1.9.2
+- jruby-19mode
+script: rake
+deploy:
+  provider: rubygems
+  api_key:
+    secure: I4nq7pk5y0vbOv0xYv1+tDt56AeQEYz6Ow2k/EHNmrgWS4OmfZDb05NW1V/kBmvIooPcJyQKx2YWzljrweXb9XSxwE+zpC/cYKMAUzV8Iv6Psjvav3DX9ucx9HX7nt9piyc/69KU9WA0doSTVIzE9H6PeQ28ipsiUFPcE50pPNo=
+  gem: rtatoeba
+  on:
+    tags: true
+    repo: pcboy/rtatoeba
