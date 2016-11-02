@@ -26,6 +26,9 @@ describe Rtatoeba do
     tatoe = Rtatoeba::Rtatoeba.new(from: 'eng', to: 'fra', query: 'monday')
     expect(tatoe.sentences).not_to be_empty
     expect(tatoe.sentences.values.any?(&:empty?)).to eql(false)
+    tatoe = Rtatoeba::Rtatoeba.new(from: 'kor', to: 'eng', query: '우리는')
+    expect(tatoe.sentences).not_to be_empty
+    expect(tatoe.sentences.values.any?(&:empty?)).to eql(false)
   end
 
   it "should gives an error if lang is incorrect" do

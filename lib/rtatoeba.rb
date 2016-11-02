@@ -39,11 +39,11 @@ module Rtatoeba
 
     def sentences
       content =
-        @agent.get("http://tatoeba.org/eng/sentences/search?query=#{@query}&from=#{@from}&to=#{@to}")
+        @agent.get("http://tatoeba.org/eng/sentences/search?query=#{URI::escape @query}&from=#{@from}&to=#{@to}")
       sentences = {}
-      content.search('.sentences_set').map do |set|
-        translations = set.search('.sentenceContent').map{|x| x.text.strip}.drop(1)
-        sentences[set.at('.mainSentence').text.strip] = translations
+      content.search('.sentence-and-translations').map do |set|
+        translations = set.search('.translations .text').map{ |x| x.text.strip }
+        sentences[set.search('.sentence .text').text.strip] = translations
       end
       sentences
     end
