@@ -10,7 +10,7 @@ Gem::Specification.new do |spec|
   spec.email         = ["david.hagege@gmail.com"]
   spec.description   = %q{Tiny gem to get sample sentences from tatoeba.org}
   spec.summary       = %q{}
-  spec.homepage      = ""
+  spec.homepage      = "https://github.com/pcboy/rtatoeba"
   spec.license       = "WTFPL"
 
   spec.files         = `git ls-files`.split($/)
